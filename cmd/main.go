@@ -32,7 +32,6 @@ func main() {
 
 	server := api.NewAPIServer(fmt.Sprintf(":%s", configs.Envs.Port), db)
 	if err := server.Run(); err != nil {
-		log.Println("main35")
 		log.Fatal(err)
 	}
 }
@@ -40,7 +39,6 @@ func main() {
 func initStorage(db *sql.DB) {
 	err := db.Ping()
 	if err != nil {
-		log.Println("main42")
 		log.Fatal(err)
 	}
 	log.Println("DB: Successfully connected!")
